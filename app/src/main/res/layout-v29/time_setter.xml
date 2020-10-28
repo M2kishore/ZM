@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="358dp"
+        android:layout_height="135dp"
+        android:gravity="center_horizontal"
+        android:text="10:00"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="192dp"
+        android:background="@drawable/ic_baseline_play_arrow_24"
+        app:layout_constraintEnd_toEndOf="@+id/text"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="412dp"
+        android:layout_height="412dp"
+        android:layout_marginTop="32dp"
+        android:progressDrawable="@drawable/circle_progress"
+        android:rotation="-90"
+        android:scaleY="-1"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintTop_toTopOf="@+id/text"
+        app:layout_constraintVertical_bias="0.56"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp"
+        android:visibility="gone"/>
+
+    <NumberPicker
+        android:id="@+id/numberPicker3"
+        android:layout_width="187dp"
+        android:layout_height="329dp"
+        android:theme="@style/NumberPickerText"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="@+id/button_start"
+        app:layout_constraintStart_toStartOf="@+id/button_start"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
